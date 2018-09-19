@@ -25,3 +25,58 @@ SCD(4)
 
 
 DesignPoints(SCD(3))
+
+
+# 3.2 Mixture designs in constrained regions
+
+# 0.143 <= x1 <= 0.572
+# 0.214 <= x2 <= 0.500
+# 0.214 <= x3 <= 0.500
+
+# What is ndm ??????
+# an integer representing the highest order of centroids requested. 
+# An overall centroid is always included, 0 indicates no other 
+# centroids will be created, 1 indicates edge centroids are 
+# requested, etc.
+
+Xvert(nfac = 3, 
+      lc = c(0.143, 0.214, 0.214), 
+      uc = c(0.572, 0.5, 0.5))
+
+Xvert(nfac = 3, 
+      lc = c(0.143, 0.214, 0.214), 
+      uc = c(0.572, 0.5, 0.5),
+      ndm = 0) # ndm = 0 seems to be set by default
+
+Xvert(nfac = 3, 
+      lc = c(0.143, 0.214, 0.214), 
+      uc = c(0.572, 0.5, 0.5),
+      ndm = 1)
+
+Xvert(nfac = 3, 
+      lc = c(0.143, 0.214, 0.214), 
+      uc = c(0.572, 0.5, 0.5),
+      ndm = 2)
+
+Xvert(nfac = 3, 
+      lc = c(0.143, 0.214, 0.214), 
+      uc = c(0.572, 0.5, 0.5),
+      ndm = 3)
+
+Xvert(nfac = 3, 
+      lc = c(0.01,0.01,0.01), 
+      uc = c(1,1,1),
+      ndm = 0)
+
+Xvert(nfac = 3, 
+      lc = c(0.01,0.01,0.01), 
+      uc = c(1,1,1),
+      ndm = 1)
+
+Xvert(nfac = 3, 
+      lc = c(0.01,0.01,0.01), 
+      uc = c(1,1,1),
+      ndm = 2)
+
+
+?Xvert
